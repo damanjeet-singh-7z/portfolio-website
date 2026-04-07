@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Education from './components/Education';
@@ -23,6 +24,7 @@ function App() {
       <div className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
         <div className="menu-inner">
           <a href="#about" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Vision</span></a>
+          <a href="#skills" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Skills</span></a>
           <a href="#projects" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Work</span></a>
           <a href="#achievements" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Certifications</span></a>
           <a href="#education" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Education</span></a>
@@ -33,6 +35,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Skills />
         <Projects />
         <Achievements />
         <Education />

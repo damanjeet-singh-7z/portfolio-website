@@ -44,13 +44,6 @@ const About = () => {
         </div>
       </div>
 
-      <div className={`vision-tags ${loaded ? 'visible' : ''}`}>
-        {skills.map((skill, index) => (
-          <div key={index} className={`float-tag tag-${(index % 5) + 1}`}>
-            {skill}
-          </div>
-        ))}
-      </div>
     </section>
   );
 };
