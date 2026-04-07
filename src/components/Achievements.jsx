@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const achievements = [
   {
@@ -36,8 +36,10 @@ const achievements = [
 ];
 
 const Achievements = () => {
+  const [activeCert, setActiveCert] = useState(null);
+
   return (
-    <section className="hackathons" id="achievements">
+    <section className="hackathons-section" id="achievements">
       <div className="hack-glow"></div>
       <div className="hack-container">
         <div className="hack-header reveal-section revealed">
@@ -48,7 +50,7 @@ const Achievements = () => {
         
         <div className="hack-grid">
           {achievements.map((item, i) => (
-            <a href={item.link} target="_blank" rel="noopener noreferrer" className="hack-card reveal-section revealed" style={{textDecoration: 'none', transitionDelay: `${i * 0.15}s`, '--card-accent': '#ff6b35'}} key={i}>
+            <div className="hack-card reveal-section revealed" style={{textDecoration: 'none', transitionDelay: `${i * 0.15}s`, '--card-accent': '#ff6b35'}} key={i}>
               <div className="hack-accent-line"></div>
               <div className="hack-number">{item.id}</div>
               <div className="hack-badge">CERTIFIED</div>
@@ -56,14 +58,32 @@ const Achievements = () => {
               <span className="hack-card-event">{item.org}</span>
               <p className="hack-card-org">{item.description}</p>
               <div className="hack-card-date">{item.date}</div>
-              <div className="hack-view-cert">
-                <span>VIEW DETAILS</span>
-                <span>→</span>
-              </div>
-            </a>
+              <button onClick={() => setActiveCert(item.link)} className="hack-link">
+                <span className="hack-link-txt">VIEW CERTIFICATE</span>
+                <div className="hack-link-arrow">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </button>
+            </div>
           ))}
         </div>
       </div>
+
+      {activeCert && (
+        <div className="cert-modal-overlay" onClick={() => setActiveCert(null)}>
+          <div className="cert-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="cert-modal-close" onClick={() => setActiveCert(null)}>✕</button>
+            <iframe 
+              src={activeCert.replace('/view', '/preview')} 
+              className="cert-iframe"
+              title="Certificate Preview"
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
