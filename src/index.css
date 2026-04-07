@@ -2666,3 +2666,106 @@ button {
     right: 1rem;
   }
 }
+
+/* EDUCATION SECTION */
+.education-section {
+  position: relative;
+  width: 100%;
+  padding: var(--space-2xl) 0;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+}
+.education-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+.education-timeline {
+  position: relative;
+  margin-top: var(--space-xl);
+  padding-left: 2rem;
+  border-left: 2px solid rgba(255, 107, 53, 0.2);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+  box-shadow: 0 0 15px var(--accent-orange);
+  border: 3px solid var(--bg-primary);
+}
+.timeline-content {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition-fast);
+}
+.timeline-content:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(255, 107, 53, 0.3);
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.timeline-date {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  color: var(--accent-orange);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 1px;
+}
+.timeline-degree {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+.timeline-institution {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--text-secondary);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-sm);
+}
+.timeline-stats {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 50px;
+  color: var(--accent-orange);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 768px) {
+  .education-timeline {
+    padding-left: 1.5rem;
+  }
+  .timeline-dot {
+    left: -1.5rem;
+    width: 12px;
+    height: 12px;
+  }
+  .timeline-degree {
+    font-size: 1.8rem;
+  }
+}

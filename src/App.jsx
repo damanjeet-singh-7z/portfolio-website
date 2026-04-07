@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Education from './components/Education';
 import Contact from './components/Contact';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <a href="#about" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Vision</span></a>
           <a href="#projects" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Work</span></a>
           <a href="#achievements" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Certifications</span></a>
+          <a href="#education" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Education</span></a>
           <a href="#contact" className="menu-link" onClick={() => setMenuOpen(false)}><span className="menu-link-text">Contact</span></a>
         </div>
       </div>
@@ -33,6 +35,7 @@ function App() {
         <About />
         <Projects />
         <Achievements />
+        <Education />
         <Contact />
       </main>
     </>
