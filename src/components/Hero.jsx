@@ -13,9 +13,8 @@ const Hero = () => {
         
         <div className="hero-text-block">
           <h1 className="hero-title">
-            <span className="hero-title-outline">DATA</span>
-            <span className="hero-title-solid">DRIVEN</span>
-            <span className="hero-title-outline">ENGINEER</span>
+            <span className="hero-title-outline">DAMANJEET</span>
+            <span className="hero-title-solid">SINGH</span>
           </h1>
         </div>
         

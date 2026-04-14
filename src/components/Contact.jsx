@@ -38,7 +38,7 @@ const Contact = () => {
 
         <div className="contact-footer">
           <p className="footer-text">Built with Custom Styling.</p>
-          <p className="footer-copy">© {new Date().getFullYear()} <span className="footer-name">DATA DRIVEN ENGINEER.</span></p>
+          <p className="footer-copy">© {new Date().getFullYear()} <span className="footer-name">Damanjeet Singh.</span></p>
         </div>
       </div>
 
