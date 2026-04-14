@@ -13,8 +13,8 @@ const Hero = () => {
         
         <div className="hero-text-block">
           <h1 className="hero-title">
-            <span className="hero-title-outline">DAMANJEET</span>
-            <span className="hero-title-solid">SINGH</span>
+            <span className="hero-title-solid">DAMANJEET</span>
+            <span className="hero-title-outline">SINGH</span>
           </h1>
         </div>
         
